@@ -94,8 +94,9 @@ footer {
     transition: color 0.3s, transform 0.3s;  
 }
 .footer-icons a img {
-    display: inline-block;
+    display: flex;
     width: 30px;
+
 }
 .footer-icons a:hover {
     color: #007bff;
@@ -109,6 +110,7 @@ footer {
 .iconn {
     display: flex;
     flex-direction: column;
+  
     
 }
 .navbar {
@@ -456,6 +458,7 @@ header h1 {
     max-width: 500px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+    padding: 20px;
 }
 .contact-form textarea {
     width: 100%;
@@ -487,3 +490,39 @@ nav a.active {
 nav a.active:hover {
     color: black;
 }
+.menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+@media ( max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 1em 0;
+    }
+    .menu-toggle { display: none;}
+    .menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+} 
